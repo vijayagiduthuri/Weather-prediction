@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Prediction</h1>
+        <form id="weather-form">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="LATITUDE">Latitude</label>
+                    <input type="number" step="any" name="LATITUDE" placeholder="Enter Latitude" required>
+                </div>
+                <div class="input-group">
+                    <label for="LONGITUDE">Longitude</label>
+                    <input type="number" step="any" name="LONGITUDE" placeholder="Enter Longitude" required>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="ELEVATION">Elevation</label>
+                    <input type="number" step="any" name="ELEVATION" placeholder="Enter Elevation" required>
+                </div>
+                <div class="input-group">
+                    <label for="AWND">AWND</label>
+                    <input type="number" step="any" name="AWND" placeholder="Enter AWND" required>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="PRCP">PRCP</label>
+                    <input type="number" step="any" name="PRCP" placeholder="Enter PRCP" required>
+                </div>
+                <div class="input-group">
+                    <label for="SNOW">SNOW</label>
+                    <input type="number" step="any" name="SNOW" placeholder="Enter SNOW" required>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="SNWD">SNWD</label>
+                    <input type="number" step="any" name="SNWD" placeholder="Enter SNWD" required>
+                </div>
+                <div class="input-group">
+                    <label for="TMAX">TMAX</label>
+                    <input type="number" step="any" name="TMAX" placeholder="Enter TMAX" required>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="TMIN">TMIN</label>
+                    <input type="number" step="any" name="TMIN" placeholder="Enter TMIN" required>
+                </div>
+                <div class="input-group">
+                    <label for="Year">Year</label>
+                    <input type="number" name="Year" placeholder="Enter Year" required>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="Month">Month</label>
+                    <input type="number" name="Month" placeholder="Enter Month" required>
+                </div>
+                <div class="input-group">
+                    <label for="Day">Day</label>
+                    <input type="number" name="Day" placeholder="Enter Day" required>
+                </div>
+            </div>
+            <button type="submit">Predict Temperature</button>
+        </form>
+
+        <div id="result-box">
+            <p id="prediction-result">Prediction will appear here</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
