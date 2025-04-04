@@ -6,6 +6,7 @@ import numpy as np
 with open('model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
+
 app = Flask(__name__)
 
 @app.route('/')
