@@ -6,7 +6,6 @@ import numpy as np
 with open('model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -26,7 +25,7 @@ def predict():
         predicted_temp = model.predict(input_data)[0]
 
         # Add emoji based on predicted temperature
-        if predicted_temp >= 26:
+        if predicted_temp >= 25:
             emoji = "☀️ Sunny"
         elif predicted_temp <= 15:
             emoji = "❄️ Cold"
